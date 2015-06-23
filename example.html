@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Example which shows how to solve the 403 Forbidden Google Server Message</title>
+		
+		<!-- include googleapis with your own API_KEY -->
+		<script src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false&amp;libraries=places&key=API_KEY"></script>
+
+    <!-- include core locationpicker library -->
+		<script src="locationpicker.jquery.min.js" type="text/javascript"></script>
+
+    <-- request map from Google Server, do NOT copy/paste the map in your own server as used to be. Google does not allow this any more -->
+    <script>
+    	var map;
+    	function initialize() {
+    		map = new google.maps.Map(document.getElementById('gmap'), {
+    			zoom: 1,
+    			center: {lat: -34.397, lng: 150.644}
+    		});
+    	}
+    	google.maps.event.addDomListener(window, 'load', initialize);	
+    </script>
+  </head>
+  
+  <body>
+    <div id="gmap"></div>
+  </body>
+
+</html>
